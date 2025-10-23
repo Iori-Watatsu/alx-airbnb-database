@@ -3,6 +3,11 @@
 ## Objective
 Ensure the Airbnb database schema is normalized to the Third Normal Form (3NF) to eliminate redundancy and maintain data integrity.
 
+## Files
+
+- `airbnb_3NF_erd.png` — Exported image of the ER diagram
+![alt text](airbnb_3NF_erd.png)
+
 ## Original Schema
 - **User**: user_id (PK), name, email, phone_number, role, created_at, updated_at
 - **Property**: property_id (PK), host_id (FK → User), title, description, address, city, state, country, price_per_night, created_at, updated_at
