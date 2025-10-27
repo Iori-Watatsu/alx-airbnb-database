@@ -11,6 +11,7 @@ SELECT
     users.email AS user_email
 FROM bookings
 INNER JOIN users ON bookings.user_id = users.id;
+ORDER BY bookings.id;
 
 -- LEFT JOIN
 -- Retrieve all properties and their reviews, including properties that have no reviews.
@@ -23,6 +24,7 @@ SELECT
     reviews.comment
 FROM properties
 LEFT JOIN reviews ON properties.id = reviews.property_id;
+ORDER BY properties.id;
 
 -- FULL OUTER JOIN
 -- Retrieve all users and all bookings, even if the user has no booking
@@ -37,3 +39,4 @@ SELECT
     bookings.end_date
 FROM users
 FULL OUTER JOIN bookings ON users.id = bookings.user_id;
+RDER BY users.id, bookings.id;
