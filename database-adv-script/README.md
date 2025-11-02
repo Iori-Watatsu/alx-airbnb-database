@@ -62,3 +62,53 @@ FULL OUTER JOIN bookings ON users.id = bookings.user_id;
 
 - Use FULL OUTER JOIN to include all records from both sides.
 
+1. Practice Subqueries
+mandatory
+
+Objective: Write both correlated and non-correlated subqueries.
+
+Instructions:
+
+    Write a query to find all properties where the average rating is greater than 4.0 using a subquery.
+
+    Write a correlated subquery to find users who have made more than 3 bookings.
+
+Repo:
+
+    GitHub repository: alx-airbnb-database
+    Directory: database-adv-script
+    File: subqueries.sql, README.md
+
+# Subqueries
+
+This directory contains SQL scripts that demonstrate the use of subqueries in the ALX Airbnb Database project.
+
+## Files
+
+- **subqueries.sql**: Contains SQL statements that use both non-correlated and correlated subqueries.
+
+## Tasks
+
+1. **Non-Correlated Subquery**
+   Retrieve all properties where the average rating is greater than 4.0.
+
+2. **Correlated Subquery**
+   Retrieve all users who have made more than 3 bookings.
+
+# Aggregations and Window Functions
+
+This directory contains SQL scripts that demonstrate the use of aggregation and window functions in the ALX Airbnb Database project.
+
+## Files
+
+- **aggregations_and_window_functions.sql**: SQL script that performs aggregation and ranking analysis.
+
+## Tasks
+
+1. **Aggregation Query**
+   - Find the total number of bookings made by each user using `COUNT` and `GROUP BY`.
+
+2. **Window Function Query**
+   - Rank all properties based on the total number of bookings using `RANK()` and `OVER (ORDER BY ...)`.
+
+
