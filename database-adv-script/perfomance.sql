@@ -29,7 +29,7 @@ JOIN users u ON b.user_id = u.id
 JOIN properties p ON b.property_id = p.id
 JOIN payments pay ON b.id = pay.booking_id;
 
--- Optimized query: reduce unnecessary columns and ensure indexed joins
+-- Optimized query: filter by specific conditions to reduce result set
 EXPLAIN ANALYZE
 SELECT
     b.id AS booking_id,
@@ -39,4 +39,6 @@ SELECT
 FROM bookings b
 JOIN users u ON b.user_id = u.id
 JOIN properties p ON b.property_id = p.id
-JOIN payments pay ON b.id = pay.booking_id;
+JOIN payments pay ON b.id = pay.booking_id
+WHERE p.city = 'New York'
+AND pay.status = 'completed';
