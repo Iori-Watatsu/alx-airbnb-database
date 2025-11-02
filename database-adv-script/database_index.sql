@@ -14,3 +14,15 @@ CREATE INDEX idx_bookings_created_at ON bookings(created_at);
 
 -- Index on properties.city (for location-based search)
 CREATE INDEX idx_properties_city ON properties(city);
+
+-- Analyze query performance using an index on bookings.user_id
+EXPLAIN ANALYZE
+SELECT *
+FROM bookings
+WHERE user_id = 42;
+
+-- Analyze query performance using an index on properties.city
+EXPLAIN ANALYZE
+SELECT *
+FROM properties
+WHERE city = 'New York';
